@@ -38,14 +38,14 @@ client.user.setPresence({
   status: 'dnd',
   game: { 
      type: 0,
-     name: 'Coder',
+     name: 'Programmer & Coder',
      details: `Mr DaHoM`,
      url: 'http://twitch.tv/M3roof',
      state: `Simo Network`,
     application_id: '377479790195769345',
      assets: {
         large_image: `377480353259978752`,
-        large_text: `progrmmar` }
+        large_text: `DaHoM` }
 
   }
     });
