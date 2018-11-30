@@ -82,10 +82,17 @@ client.on('guildMemberAdd', member => {
 const YossiF = member.guild.channels.get("515275185314856964");//ايدي الشات
 if(!YossiF) return;
 if(YossiF) {
-YossiF.send(`**..Welcome To Simo Network ..**`);          
+YossiF.send(`** .# Welcome To Simo Network , :black_heart: **`);          
 }
 });
 
+client.on('guildMemberAdd', member => {
+const YossiF = member.guild.channels.get("514832735676923934");//ايدي الشات
+if(!YossiF) return;
+if(YossiF) {
+YossiF.send(`** .# Welcome To Codes Server , :black_heart: **`);          
+}
+});
 
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {
@@ -93,6 +100,18 @@ client.on('message', msg => {
   }
 });
 
+client.on("message", message => {
+    if (message.content.startsWith(prefix + "bc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  m.send(`${argresult}\n ${m}`);
+  })
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:love_letter:  **عدد المستلمين** `);
+  message.delete();
+  };
+  });
 
 client.on('message', msg => {
   if (msg.content === 'باك') {
